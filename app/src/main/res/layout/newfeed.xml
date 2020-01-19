@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dimen_8dp"
+    android:elevation="@dimen/dimen_8dp"
+    app:cardCornerRadius="@dimen/dimen_8dp"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/newfeed"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_card"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="@dimen/dimen_12dp"
+            android:elevation="@dimen/dimen_4dp"
+            app:cardCornerRadius="30dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/img_profile_pic"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/amanda"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:text="Amanda"
+            android:textColor="#222222"
+            android:textSize="18dp"
+            app:layout_constraintLeft_toRightOf="@id/profile_card"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_posted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="posted"
+            app:layout_constraintLeft_toLeftOf="@id/txt_name"
+            app:layout_constraintTop_toBottomOf="@id/txt_name" />
+
+        <ImageView
+            android:id="@+id/img_time"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="@dimen/dimen_12dp"
+            android:src="@drawable/ic_watch"
+            app:layout_constraintRight_toLeftOf="@id/txt_time"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_12dp"
+            android:text="2h"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/post_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_8dp"
+            android:elevation="@dimen/dimen_4dp"
+            app:cardCornerRadius="30dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile_card">
+
+            <ImageView
+                android:id="@+id/img_post"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/amandapost"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/post_card" />
+        </androidx.cardview.widget.CardView>
+
+
+        <ImageView
+            android:id="@+id/img_heart"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="@dimen/dimen_12dp"
+            android:src="@drawable/ic_heart"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/txt_heart"
+            app:layout_constraintTop_toBottomOf="@id/post_card" />
+
+        <TextView
+            android:id="@+id/txt_heart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_12dp"
+            android:text="2K"
+            app:layout_constraintLeft_toRightOf="@id/img_heart"
+            app:layout_constraintRight_toLeftOf="@id/img_comment"
+            app:layout_constraintTop_toBottomOf="@id/post_card" />
+
+        <ImageView
+            android:id="@+id/img_comment"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="@dimen/dimen_12dp"
+            android:src="@drawable/ic_comment"
+            app:layout_constraintLeft_toRightOf="@id/txt_heart"
+            app:layout_constraintRight_toLeftOf="@id/txt_comment"
+            app:layout_constraintTop_toBottomOf="@id/post_card" />
+
+        <TextView
+            android:id="@+id/txt_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_12dp"
+            android:text="98"
+            app:layout_constraintLeft_toRightOf="@id/img_comment"
+            app:layout_constraintRight_toLeftOf="@id/img_share"
+            app:layout_constraintTop_toBottomOf="@id/post_card" />
+
+        <ImageView
+            android:id="@+id/img_share"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="@dimen/dimen_12dp"
+            android:src="@drawable/ic_share"
+            app:layout_constraintLeft_toRightOf="@id/txt_comment"
+            app:layout_constraintRight_toLeftOf="@id/txt_share"
+            app:layout_constraintTop_toBottomOf="@id/post_card" />
+
+        <TextView
+            android:id="@+id/txt_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_12dp"
+            android:text="69"
+            app:layout_constraintLeft_toRightOf="@id/img_share"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/post_card" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
